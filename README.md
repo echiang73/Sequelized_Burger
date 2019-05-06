@@ -29,7 +29,7 @@ This full-stack application utilizes the Model/View/Controller (MVC) design patt
 * [Express-Handlebars] (https://www.npmjs.com/package/express-handlebars) - A view engine that utilizes logicless Mustache templating language for Express that keep the view and the code separated.
 * [sequelize] (https://www.npmjs.com/package/sequelize) - A promise-based Node.js ORM for Postgres, MySQL, MariaDB, SQLite and Microsoft SQL Server.
 * [mysql2] (https://www.npmjs.com/package/mysql2) - A MySQL client for Node.js with focus on performance and support use of Sequelize.
-* [DotEnv](https://www.npmjs.com/package/dotenv) - Dotenv store your sensitive credentials and load in environment variables in .env file to merge into your process.env runtime variables. :closed_lock_with_key:
+* [DotEnv] (https://www.npmjs.com/package/dotenv) - Dotenv store your sensitive credentials and load in environment variables in .env file to merge into your process.env runtime variables. :closed_lock_with_key:
 
 #### Directory structure
 
