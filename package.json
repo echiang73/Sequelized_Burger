@@ -1,7 +1,7 @@
 {
   "name": "tucson_burger",
   "version": "1.0.0",
-  "description": "Tucson Burger (Eat-Da-Burger) App using Node, Express, Handlebas, and ORM",
+  "description": "Tucson Burger (Eat-Da-Burger) App using Node, Express, Handlebas, and Sequelize ORM",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -9,22 +9,22 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/echiang73/Tucson_Burger.git"
+    "url": "git+https://github.com/echiang73/Sequelized_Burger.git"
   },
   "keywords": [
     "Eat-Da-Burger",
     "Node",
     "Express",
     "Handlebars",
-    "ORM",
+    "Sequelize ORM",
     "MySQL"
   ],
   "author": "Eddie Chiang",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/echiang73/Tucson_Burger/issues"
+    "url": "https://github.com/echiang73/Sequelized_Burger/issues"
   },
-  "homepage": "https://github.com/echiang73/Tucson_Burger#readme",
+  "homepage": "https://github.com/echiang73/Sequelized_Burger#readme",
   "dependencies": {
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
