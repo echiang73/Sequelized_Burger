@@ -1,12 +1,54 @@
-module.exports = function(sequelize, DataTypes) {
-  var Burger = sequelize.define("Burger", {
-    burger_name: DataTypes.STRING,
-    pickedup: DataTypes.BOOLEAN
-  });
-  return Burger;
-}
+var db = require("./models"); // Added Sequelize Model reference
 
-// // Import the ORM to create functions that will interact with the database.
+module.exports = function(app) {
+
+  // GET route for getting all of the burgers
+  app.get("/api/burgers/", function(req, res) {
+    db.BurgerModel.findAll({})
+      .then(function(dbBurger) {
+        res.json(dbBurger);
+      });
+  });
+
+  // POST route for saving a new burger
+  app.post("/api/burgers", function(req, res) {
+    console.log(req.body);
+    db.BurgerModel.create({
+      burger_name: req.body.burger_name,
+      pickedup: req.body.pickedup
+    })
+      .then(function(dbBurger) {
+        res.json(dbBurger);
+      });
+  });
+
+  // PUT route for updating burger
+  app.put("/api/burgers", function(req, res) {
+    db.BurgerModel.update(req.body,
+      {
+        where: {
+          id: req.body.id
+        }
+      })
+      .then(function(dbBurger) {
+        res.json(dbBurger);
+      });
+  });
+
+  // DELETE route for deleting burger
+  app.delete("/api/burgers/:id", function(req, res) {
+    db.BurgerModel.destroy({
+      where: {
+        id: req.params.id
+      }
+    })
+      .then(function(dbBurger) {
+        res.json(dbBurger);
+      });
+  });
+
+};
+// Import the ORM to create functions that will interact with the database.
 // var orm = require("../config/orm.js");
 
 // var burger = {
