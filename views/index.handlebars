@@ -1,0 +1,145 @@
+<div class="jumbotron">
+  <div class="container">
+    <div class="row justify-content-sm-center">
+      {{!-- <div class="col-sm-auto">
+        
+      </div> --}}
+      <div class="col col-lg-6">
+        <img src="assets/images/hot.png" id="pepper-logo" alt="">
+        <h1 class="display-4">Tucson Burger</h1>
+      </div>
+      {{!-- <div class="col-sm-auto">
+        
+      </div> --}}
+    </div>
+    <div class="row justify-content-sm-center">
+      <p class="lead">Welcome to Old Pueblo's "Hottest" Burger Joint!</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-lg-4">
+      <div class="card" id="card1">
+        <div class="card-body">
+          {{!-- <h5 class="card-title">Card title</h5> --}}
+          <h3 class="columnHeader">Place Order Here</h3>
+          <hr>
+
+          <div class="instructions">Order a favorite!</div>
+
+          <div class="favBurger-wrapper">
+            <ol>
+            <li><form class="create-form1">
+              <input type="text" id="bur1" class="favBurger" name="burger_name" value="Old Pueblo Burger">
+              <button class="order-burger" id="fav-btn" type="submit">$8.00</button><div class="div-clear"></div>
+            </form></li>
+            <li><form class="create-form2">
+              <input type="text" id="bur2" class="favBurger" name="burger_name" value="Tucson Heat Burger">
+              <button class="order-burger" id="fav-btn" type="submit">$8.50</button><div class="div-clear"></div>
+            </form></li>
+            <li><form class="create-form3">
+              <input type="text" id="bur3" class="favBurger" name="burger_name" value="Wildcat Whopper">
+              <button class="order-burger" id="fav-btn" type="submit">$7.50</button><div class="div-clear"></div>
+            </form></li>
+            <li><form class="create-form4">
+              <input type="text" id="bur4" class="favBurger" name="burger_name" value="Valley Fever Burger">
+              <button class="order-burger" id="fav-btn" type="submit">$9.00</button><div class="div-clear"></div>
+            </form></li>
+            <li><form class="create-form5">
+              <input type="text" id="bur5" class="favBurger" name="burger_name" value="Juicy Lucy Burger">
+              <button class="order-burger" id="fav-btn" type="submit">$9.50</button><div class="div-clear"></div>
+            </form></li>
+          </ol>
+          
+          
+          
+          
+          
+          </div>
+          {{!-- <ol> --}}
+            {{!-- <li>Old Pueblo Burger: $8.00</li>
+            <li>Tucson Heat Burger: $8.50</li>
+            <li>Wildcat Whopper: $7.50</li>
+            <li>Valley Fever Burger: $9.00</li>
+            <li>Jucy Lucy Burger: $9.50</li> --}}
+            {{!-- <li><input type="text" id="bur1" class="favBurger" name="burger_name" value="Old Pueblo Burger">
+              <button class="order-burger" id="fav-btn" type="submit">$8.00</button></li><div class="div-clear"></div>
+              <li><input type="text" id="bur2" class="favBurger"  name="burger_name" value="Tucson Heat Burger">
+              <button class="order-burger" id="fav-btn" type="submit">$8.50</button></li><div class="div-clear"></div> --}}
+              {{!-- <li>Wildcat Whopper<input type="text" id="bur3" class="favBurger" name="burger_WW">
+              <button class="order-burger" id="fav-btn" type="submit">$7.50</button></li><div class="div-clear"></div>
+              <li>Valley Fever Burger<input type="text" id="bur4" class="favBurger" name="burger_VFB">
+              <button class="order-burger" id="fav-btn" type="submit">$9.00</button></li><div class="div-clear"></div>
+              <li>Juicy Lucy Burger<input type="text" id="bur5" class="favBurger" name="burger_JLB">
+              <button class="order-burger" id="fav-btn" type="submit">$9.50</button></li><div class="div-clear"></div> --}}
+          {{!-- </ol>
+          <hr>
+          </form> --}}
+
+          Or make your own burger:
+
+          <form class="create-form">
+
+            <div class="form-group">
+              <label for="bur">Burger Name:</label>
+              <input type="text" id="bur" class="BTO" name="burger_name" placeholder=" Build-to-order">
+              <label for="bur">Name for the order:</label>
+              <input type="text" id="bur-customer" class="BTO" name="customer_name" placeholder=" Your Name">
+            </div>
+
+            {{!-- <div class="form-group">
+              <label for="pickedup">Pickedup?</label><br>
+              <input type="radio" name="pickedup" value="1" checked> Pickedup!<br>
+              <input type="radio" name="pickedup" value="0"> NotPickedup
+            </div> --}}
+
+            <button class="order-burger" type="submit">Place Order - $10 each</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card" id="card2">
+        <div class="card-body">
+          {{!-- <h5 class="card-title">Card title</h5> --}}
+          <h3 class="columnHeader">Pick Up Here</h3>
+          <hr>
+
+          <div class="instructions">Order up!</div>
+          <ul>
+            {{#each burgers}}
+            {{#unless pickedup}}
+            {{> burgers/burger-block pickedup=true}}
+            {{/unless}}
+            {{/each}}
+          </ul>
+          <hr>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-lg-4">
+      <div class="card" id="card3">
+        <div class="card-body">
+          {{!-- <h5 class="card-title">Card title</h5> --}}
+          <h3 class="columnHeader">Dine at Table</h3>
+          <hr>
+
+          <div class="instructions">Devour your burger!</div>
+          <ul>
+            {{#each burgers}}
+            {{#if pickedup}}
+            {{> burgers/burger-block pickedup=false}} {{!-- this line not necessary if not deleting--}}
+            {{/if}}
+            {{/each}}
+          </ul>
+          <hr>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+</div>

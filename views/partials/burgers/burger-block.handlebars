@@ -1,0 +1,17 @@
+<li>
+	{{burger_name}}
+
+{{!-- {{#if pickedup}}
+	<button class="change-pickedup" data-id="{{id}}" data-newpickedup="{{pickedup}}">
+		PICK IT UP!
+	</button>
+{{/if}} --}}
+	<br>
+	<button class="change-pickedup" data-id="{{id}}" data-newpickedup="{{pickedup}}">
+		{{#if pickedup}}PICK IT UP!{{else}}SEND BACK!!{{/if}}
+	</button>
+
+{{#unless pickedup}}
+	<button class="delete-burger" data-id="{{this.id}}">DEVOUR...YUM!</button>
+{{/unless}}
+</li>
