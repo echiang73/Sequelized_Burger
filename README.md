@@ -38,18 +38,16 @@ All the recommended files and directories should look like the following structu
 ```
 .
 ├── config
-│   ├── connection.js
-│   └── orm.js
-│
-├── controllers
-│   └── burgers_controller.js
+│   ├── config.json
+│   └── keys.js
 │
 ├── db
 │   ├── schema.sql
 │   └── seeds.sql
 │
 ├── models
-│   └── burger.js
+│   ├── burger.js
+│   └── index.js
 │
 ├── node_modules
 │
@@ -66,6 +64,11 @@ All the recommended files and directories should look like the following structu
 │       │    └── webpreview.gif
 │       └── js
 │            └── burgers.js
+│
+├── routes
+│   └── apiRoutes.js
+│   └── htmlRoutes.js
+│
 ├── server.js
 │
 └── views
