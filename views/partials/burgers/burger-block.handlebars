@@ -1,5 +1,5 @@
 <li>
-	{{burger_name}}
+	{{dataValues.burger_name}}
 
 {{!-- {{#if pickedup}}
 	<button class="change-pickedup" data-id="{{id}}" data-newpickedup="{{pickedup}}">
@@ -7,11 +7,11 @@
 	</button>
 {{/if}} --}}
 	<br>
-	<button class="change-pickedup" data-id="{{id}}" data-newpickedup="{{pickedup}}">
+	<button class="change-pickedup" data-id="{{dataValues.id}}" data-newpickedup="{{dataValues.pickedup}}">
 		{{#if pickedup}}PICK IT UP!{{else}}SEND BACK!!{{/if}}
 	</button>
 
 {{#unless pickedup}}
-	<button class="delete-burger" data-id="{{this.id}}">DEVOUR...YUM!</button>
+	<button class="delete-burger" data-id="{{this.dataValues.id}}">DEVOUR...YUM!</button>
 {{/unless}}
 </li>

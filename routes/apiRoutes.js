@@ -15,7 +15,7 @@ module.exports = function(app) {
     console.log(req.body);
     db.Burger.create({
       burger_name: req.body.burger_name,
-      pickedup: req.body.pickedup
+      pickedup: false // req.body.pickedup
     })
       .then(function(dbBurger) {
         res.json(dbBurger);
@@ -23,11 +23,12 @@ module.exports = function(app) {
   });
 
   // PUT route for updating burger
-  app.put("/api/burgers", function(req, res) {
-    db.Burger.update(req.body,
-      {
+  app.put("/api/burgers/:id", function(req, res) {
+    db.Burger.update({
+      pickedup: true // req.body.pickedup
+    },{
         where: {
-          id: req.body.id
+          id: req.params.id
         }
       })
       .then(function(dbBurger) {
