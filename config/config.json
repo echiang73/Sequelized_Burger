@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "MySturt!3",
+    "password": keys.mysqlPassword,
     "database": "burgers_db",
     "host": "127.0.0.1",
     "dialect": "mysql"

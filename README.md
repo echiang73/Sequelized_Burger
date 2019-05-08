@@ -83,7 +83,7 @@ All the recommended files and directories should look like the following structu
 ## Author
 * Eddie Chiang
 * Click on the deployed app on Heroku!
-https://pacific-springs-44052.herokuapp.com/ ------------------->
+https://tucsonburger.herokuapp.com/
 
 * Click on the GitHub link to view code!
 https://github.com/echiang73/Sequelized_Burger
