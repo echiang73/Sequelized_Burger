@@ -13,9 +13,10 @@ module.exports = function(app) {
   // POST route for saving a new burger
   app.post("/api/burgers", function(req, res) {
     console.log(req.body);
+    console.log(req.body.pickedup);
     db.Burger.create({
       burger_name: req.body.burger_name,
-      pickedup: false // req.body.pickedup
+      pickedup: req.body.pickedup // false
     })
       .then(function(dbBurger) {
         res.json(dbBurger);
@@ -24,8 +25,10 @@ module.exports = function(app) {
 
   // PUT route for updating burger
   app.put("/api/burgers/:id", function(req, res) {
+    console.log(req.body);
+    console.log(req.body.pickedup);
     db.Burger.update({
-      pickedup: true // req.body.pickedup
+      pickedup: req.body.pickedup // true
     },{
         where: {
           id: req.params.id

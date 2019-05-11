@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/echiang73/Sequelized_Burger#readme",
   "dependencies": {
+    "dotenv": "^8.0.0",
     "express": "^4.16.4",
     "express-handlebars": "^3.0.2",
     "mysql2": "^1.6.5",
